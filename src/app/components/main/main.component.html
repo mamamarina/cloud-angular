@@ -1,0 +1,26 @@
+<div class="container grid grid-cols-3 grid-rows-2 gap-2 mx-7 mt-4 relative">
+
+    <div class="overlay absolute top-0 left-0 right-0 bottom-0 bg-white opacity-5"></div>
+
+    <div class="item text-start p-4 h-30 relative" 
+         *ngFor="let item of items"
+         (click)="toggle()"
+         
+         [class.bg-green-50]="isBackground">
+
+        <div class="wrapper h-14">
+            <h1 class="title mx-2 mb-1 text-white"
+                [style.color]="isTextColor ? 'black' : 'white'">{{item.title}}</h1>
+            <p class="mx-2">{{item.description}}</p>
+        </div>
+
+        <div class="icons flex justify-between">
+            <div class="image flex mx-2 mt-7">
+                <img class="h-5 w-5 block" [src]="image" alt="" 
+                     *ngFor="let image of images">
+            </div>
+            <span class="material-icons block self-end"
+                  *ngIf="isClicked">arrow_right_alt</span>
+        </div>
+    </div>
+</div>

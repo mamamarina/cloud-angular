@@ -1,0 +1,17 @@
+<div class="container px-7 flex items-center">
+    <a href="#">
+        <span class="material-icons mr-4 block">search</span>
+    </a>
+    <nav class="block w-full">
+        <ul class="flex">
+            
+            <li class="relative mr-4 p-2"
+                *ngFor="let listItem of listItems; let index = index"
+                (click)="activeIndex = index" [ngClass]="{active: activeIndex === index}">
+                <a href="#" 
+                class="block text-left">{{listItem}}</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+

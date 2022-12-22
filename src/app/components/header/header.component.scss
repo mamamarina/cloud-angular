@@ -1,0 +1,12 @@
+a,
+span {
+    color: rgb(179, 193, 219);
+}
+
+.active::after {
+    content: "*";
+    color: rgb(255, 0, 0); 
+    position: absolute;
+    top: 0;
+    right: 0; 
+}

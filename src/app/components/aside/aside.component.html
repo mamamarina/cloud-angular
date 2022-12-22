@@ -1,0 +1,17 @@
+<div class="container pt-5">
+    <a href="#" class="block text-left ml-7" block>
+        <span class="material-icons block">cloud_queue</span>
+    </a>
+    
+    <nav class="ml-30px mt-40px list-none text-left">
+        <ul>
+            <li class="px-[12px]"
+                *ngFor="let listItem of listItems; let index = index">
+                <a class="text-sm font-light block p-2 m-2" href="#"
+                   (click)="activeIndex = index" [ngClass]="{active: activeIndex === index}">{{listItem}}</a>
+            </li>
+        </ul>
+    </nav>
+    
+</div>
+
